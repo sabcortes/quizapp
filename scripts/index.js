@@ -20,15 +20,16 @@ $(document).ready(function() {
     continueFromFeedbackToNextQuestion();
   });
 
+  //this click event will restart the quiz app
   $('#restart').on('click', event=> {
-    restartQuiz();
+    event.preventDefault();
+    location.reload();
   });
   
   console.log("click to start works");
 });
 
 function displayQuestions() {
-  //for (i=0; i <STORE.length; i ++) {
     if (questionNumber < STORE.length) {
       $('#question').html(`${STORE[questionNumber].question}`);
       $('#js-questionsAnswers  > fieldset').html(`<div class="box">
@@ -58,13 +59,14 @@ function displayQuestions() {
         );
     }
     else {
-      $('.js-quiz').hide();
-      $('.js-feedback').show();
+      $('#quiz').attr("hidden", true);
+      $('#feedbackSection').attr("hidden", true);
+      $('#results').attr("hidden",false);
+      $('.questionNumber').text(10);
       renderResults();
       restartQuiz();
     };
   };
-//};
 
 function renderQuestion() {
   $('#js-questionsAnswers').html(displayQuestions());
@@ -76,6 +78,7 @@ function userSelectedAnswerChoice() {
     let answer= selected.val();
     let correctAnswer = `${STORE[questionNumber].answer}`;
     $('#quiz').attr("hidden", true);
+    $('#results').attr("hidden", true);
 
     if(answer===correctAnswer) {
       $('#feedbackAnswer').removeClass("incorrect").addClass("correct");
@@ -86,7 +89,7 @@ function userSelectedAnswerChoice() {
     else{
       $('#feedbackAnswer').removeClass("correct").addClass("incorrect");
       $('#feedbackAnswer > h2').html("Uh-oh!");
-      $('#feedbackAnswer > span').html(`The correct answer is ${STORE[questionNumber].answer} <div>${STORE[questionNumber].feedback}</div>`);
+      $('#feedbackAnswer > span').html(`The correct answer is ${STORE[questionNumber].answer}! <div>${STORE[questionNumber].feedback}</div>`);
     };
     
     $('#feedbackSection').attr("hidden", false);
@@ -117,18 +120,22 @@ function startQuiz() {
 };
 
 function renderResults(){
+  $('#quiz').attr("hidden", true);
+  $('#feedbackSection').attr("hidden", true);
+
   if (score > 6) {
-    $('.js-feedback').html(`
-    <div class= "results"><h3>Gig 'em, Aggie! You got ${score} out of 10 right!</h3>
-    <button id= "restart">Restart Quiz!</button>
-    </div>`);
+    $('#finalComment').removeClass("wrong").addClass("right");
+    $('#finalComment > h2').html(`Gig 'em, Aggie! You got ${score} out of 10 right!`);
+
   }
   else {
-    $('.js-feedback').html(`<div class="results"><h3>Oh no! You must not be a former student.</h3>
-    <span>You got ${score} out of 10 right. Want to try again?</span>
-    <button id="restart">Restart Quiz!</button>
-    </div>`);
+    $('#finalComment').removeClass("right").addClass("wrong");
+    $('#finalComment > h2').html("Oh no! You must not be a former student.");
+    $('#finalComment > span').html(`You got ${score} out of 10 right. Want to try again?`);
   };
+
+  $('#results').attr("hidden", false);
+
 };
 
 function restartQuiz () {

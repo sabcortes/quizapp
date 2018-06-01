@@ -15,7 +15,7 @@
     <header role="banner">
         <ul class= "progressTracker">
             <img src="https://brandguide.tamu.edu/assets/downloads/logos/TAM-LogoBox.png" alt= "Texas A&#38;M University Logo">
-            <li class= "questionCount">Questions: <span class="questionNumber">1</span>/ 10</li>
+            <li class= "questionCount">Questions: <span class="questionNumber">0</span>/ 10</li>
             <li class= "correctCount">Score: <span class= "score">0</span>/ 10</li>
         </ul>
     </header>
@@ -24,7 +24,7 @@
 
         <!-- for start page-->
         <section role="region" class = "startPage">
-          <h1>"From the outside looking in, you can't understand it. From the inside looking out, you can't expalin it."</h1>
+          <h1>"From the outside looking in, you can't understand it. From the inside looking out, you can't explain it."</h1>
                 <span class = "challenge">Test your Texas A&#38;M knowledge here!</span><br>
                 <button type = "button" id = "quizStart">Click to Begin</button>
 
@@ -47,12 +47,17 @@
                <h2></h2>
                <span class= "incorrect" ></span>
             </div>
-            <div class="feedback" id="">
+           <!-- <div class="feedback" id="">
               <span></span>
-            </div>
+            </div> -->
                 <button type= "submit" id="continue">Continue</button>
-        <!-- </div>-->
-         <div class="results"></div>
+        </section>
+        <section role="region" id="results" hidden="hidden">
+         <div class="results" id="finalComment">
+             <h2></h2>
+             <span></span>
+         </div>
+         <button id="restart">Restart Quiz!</button>
       </section>
         
         

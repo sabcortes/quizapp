@@ -26,12 +26,12 @@ const STORE= [
    {
        question: "1963 in an important year in the history of Texas A&#38;M University, why?",
        answers: [
-           "The University is renamed",
-           "African-Americans are first allowed admittance into the University",
-           "Women are first allowed admittance into the University",
-           "All of the above are true",
+           "The University is renamed.",
+           "African-Americans are first allowed admittance into the University.",
+           "Women are first allowed admittance into the University.",
+           "All of the above are true.",
        ],
-       answer: "All of the above are true",
+       answer: "All of the above are true.",
        feedback: "1963 was a great year of progress for the University. In addition to these amazing changes, the University also removed the mandatory service in the Corps of Cadets for all students. The creation of the Corps of Cadets was a requirement of the Morrill Act.",
    },
 
@@ -41,9 +41,9 @@ const STORE= [
            "Miss Rev is the highest ranking member of the Corps of Cadets.",
            "Tradition states that if Miss Rev barks during class, the class is dismissed.",
            "When Miss Rev passes away, she is given full military honors and is buried on the North end of Kyle Field.",
-           "All of the above are true",
+           "All of the above are true.",
        ],
-       answer: "All of the above are true",
+       answer: "All of the above are true.",
        feedback: "The story goes that in 1931, a group of cadets were driving back to town when they hit a dog. Although dogs were not allowed at the University housing, they snuck her in to take care of her. Unfortunately, when Reveille was played the next morning the injured dog began to bark and gave herself away, earning her the name Reveille.",
    },
 
@@ -92,7 +92,7 @@ const STORE= [
            "Following Aggie Tradition, from when the school was all male, our cheerleading squad is composed of men from the Corps of Cadets.",
        ],
        answer: "No cheerleaders here. Just 5 guys elected to be Yell Leaders!",
-       feedback: "The Yell Leaders are comprised of 5 upperclass male students that lead all Aggies in Yells. (We don/'t cheer or boo, we hiss and yell!)",
+       feedback: "The Yell Leaders are comprised of 5 upperclass male students that lead all Aggies in Yells. (We don't cheer or boo, we hiss and yell!)",
    },
 
    {
