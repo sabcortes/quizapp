@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+body {
+font-family: 'Hind', sans-serif;
+}
+
+ul {
+width: auto;
+margin-bottom: 2%;
+text-align: center;
+padding: 0;
+}
+
+img {
+display: block;
+width: 15%;
+height: 15%;
+}
+
+li {
+list-style-type: none;
+display: inline-block;
+font-weight: bold;
+}
+
+main {
+width: 50%;
+border: 2px dashed maroon;
+z-index: auto;
+}
+
+.startPage, .js-quiz, .js-feedback {
+width: 100%;
+padding: 8%;
+margin-bottom: 2%;
+}
+
+fieldset {
+border: none;
+}
+
+.box {
+text-align: center;
+}
+
+input[type="raido"] {
+display: block;
+}
+
+button {
+display: block;
+width: auto;
+border-radius: 5%;
+border: none;
+background-color: black;
+color: white;
+font-size: 14pt;
+margin: 5% auto;
+}
+
+button:hover {
+cursor: pointer;
+background-color: maroon;
+color: white;
+}
+
+h2 {
+text-align: center;
+text-transform: uppercase;
+}
+
+@media only screen and (min-width: 640px) {
+
+.startPage, .js-quiz, .js-feedback {
+  width: 75%;
+  padding: 5%;
+}
+
+h1 {
+  font-size: 14pt;
+}
+
+img {
+  width: 10%;
+  height: 10%;
+  padding: 2%;
+}
+
+button{
+  font-size: 12pt;
+}
+
+h2{
+  font-size: 14pt;
+}
+}
